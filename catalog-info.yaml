@@ -3,6 +3,10 @@ kind: AWSEnvironment
 metadata:
   name: rds
   namespace: default
-  description: AWS RDS Environment
+  description: AWS RDS environment for Backstage scaffolder
 spec:
-  # your spec here
+  region: us-east-1
+  accountId: "123456789012"
+  resources:
+    - type: rds
+      identifier: my-db-instance
