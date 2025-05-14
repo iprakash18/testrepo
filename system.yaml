@@ -1,0 +1,9 @@
+# your-system.yaml
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: harmonix
+  namespace: default
+  description: System that contains the RDS resource
+spec:
+  owner: harmonix
