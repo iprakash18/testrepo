@@ -1,12 +1,15 @@
 apiVersion: backstage.io/v1alpha1
-kind: AWSEnvironment
+kind: Resource
 metadata:
   name: rds
+  description: AWS RDS database instance
   namespace: default
-  description: AWS RDS environment for Backstage scaffolder
 spec:
-  region: us-east-1
-  accountId: "051171442365"
-  resources:
-    - type: rds
-      identifier: my-db-instance
+  type: database
+  owner: group:default/everyone
+  system: your-system-name
+  profile:
+    type: rds
+    region: us-east-1
+    accountId: "051171442365"
+    identifier: my-db-instance
