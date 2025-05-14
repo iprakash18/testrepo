@@ -1,0 +1,8 @@
+apiVersion: backstage.io/v1alpha1
+kind: AWSEnvironment
+metadata:
+  name: rds
+  namespace: default
+  description: AWS RDS Environment
+spec:
+  # your spec here
