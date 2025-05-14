@@ -1,15 +1,12 @@
 apiVersion: backstage.io/v1alpha1
-kind: Resource
+kind: AWSEnvironment
 metadata:
-  name: rds
-  description: AWS RDS database instance
+  name: rds-harmonix
   namespace: default
+  description: AWS RDS environment for Harmonix
 spec:
-  type: database
-  owner: group:default/everyone
-  system: harmonix
-  profile:
-    type: rds
-    region: us-east-1
-    accountId: "051171442365"
-    identifier: my-db-instance
+  region: us-east-1
+  accountId: "051171442365"
+  resources:
+    - type: rds
+      identifier: my-db-instance
